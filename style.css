@@ -11,53 +11,6 @@
 body{
 	background-image:url("zdj1.png");
 }
-#a{
-
-	color:white;
-	width:100%;
-	height:80%;
-
-}
-#b{
-	background-color:navy;
-	color:white;
-	width:60%;
-	height:20%;
-	font-size:30px;
-	float:left;
-}
-#c{
-	background-color:navy;
-	color:white;
-	width:15%;
-	height:20%;
-	font-size:30px;
-	float:right;
-	
-}
-#d{
-	background-color:navy;
-	color:white;
-	width:15%;
-	height:20%;
-	font-size:30px;
-	float:right;
-	
-}
-#e{
-	background-color:navy;
-	color:lime;
-	width:10%;
-	height:20%;
-	font-size:30px;
-	float:right;
-	
-}
-img.z{
-	width:80px;
-	height:25px;
-}
-
 .kalkulator{
 	margin: 25px;
 	display: grid;
@@ -66,7 +19,6 @@ img.z{
 	grid-template-columns: repeat(5, 80px);
 	grid-template-rows: minmax(120px, auto) repeat(5, 80px);
 	min-height: 70vh;
-	float: left;
 }
 .wynik{
 	grid-column: 1 / -1;
