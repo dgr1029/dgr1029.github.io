@@ -86,4 +86,73 @@ Home
 </div>
 <h2><center><a href= "kalkulator.html"><b><div id="f">Kalkulator</div></b></a></center></h2>
 </body>
+	<head>
+<meta charset="UTF-8">
+<style>  
+td { 
+	background-color: gray;
+	border: 2px solid navy;
+	color: white;
+	text-align: center;
+	width: 80px;
+	height: 50px; 
+}
+ </style>
+<table id="calendar">
+<thead>
+<tr>
+<td><button id="poprzedni">&larr;</button></td>
+<td colspan="5" id="calendar_top">Miesiąc</td>
+<td><button id="następny">&rarr;</button></td>
+<tr><td>pon</td><td>wt</td><td>śr</td><td>czw</td><td>pią</td><td>sob</td><td>nie</td></tr></thead>
+<tbody>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+</tbody>
+</table>
+</head>
+<body>
+<script>
+
+var aMonths = new Array('styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień');
+var date    = new Date();
+
+Calendar();
+
+document.querySelector('#poprzedni').addEventListener('click',PoprzedniMiesiąc);
+document.querySelector('#następny').addEventListener('click',NastępnyMiesiąc);
+
+function PoprzedniMiesiąc(){
+date = new Date(date.getFullYear(), date.getMonth() - 1, 1);
+Calendar();
+}
+
+function NastępnyMiesiąc(){
+date = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+Calendar();
+}
+
+function Calendar(){
+
+const   td       = document.querySelectorAll('#calendar tbody td');
+const   firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+const   lastDay  = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+const   day      = firstDay.getDay() ? firstDay.getDay()-1 : 6;
+
+document.querySelector('#calendar_top').innerHTML = aMonths[date.getMonth()] + ' ' + date.getFullYear();
+
+let dzien = 1;
+for (let i = 0; i < td.length; i++) {
+     td[i].innerHTML = (i>=day && dzien<=lastDay.getDate()) ? dzien++ : '';
+     if (i>=35) td[i].style.display =  (day+dzien-1<36) ?  'none' : ''; 
+     }
+
+}
+
+</script>
+</body>
 </html>
