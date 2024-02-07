@@ -58,3 +58,13 @@ button:hover, button:focus{
 .row-dwa{
 	grid-row: span 2;
 }
+nav {
+        background-color: #444;
+        padding: 10px 20px;
+        text-align: center;
+}
+nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+}
