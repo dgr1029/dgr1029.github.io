@@ -37,7 +37,7 @@ const oblicz = () => {
       break
       case '÷':
 	  if(aktualne === 0) {
-		 wyczyscWynik()
+		 zaktualizujWynik(Błąd)
 		 return
 	  }
         dzialanie = poprzednie / aktualne
