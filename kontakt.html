@@ -1,79 +1,109 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<style>
-body{
-	background:white;
-}
-#a{
-
-	color:white;
-	width:100%;
-	height:80%;
-
-}
-#b{
-	background-color:navy;
-	color:white;
-	width:60%;
-	height:20%;
-	font-size:30px;
-	float:left;
-}
-#c{
-	background-color:navy;
-	color:white;
-	width:15%;
-	height:20%;
-	font-size:30px;
-	float:right;
-	
-}
-#d{
-	background-color:navy;
-	color:white;
-	width:15%;
-	height:20%;
-	font-size:30px;
-	float:right;
-	
-}
-#e{
-	background-color:navy;
-	color:lime;
-	width:10%;
-	height:20%;
-	font-size:30px;
-	float:right;
-	
-}
-img.z{
-	width:80px;
-	height:25px;
-}
-</style>
-<title>Kontakt</title>
-<link rel="icon" href="2.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Simple Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #333
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 20px;
+            text-align: center;
+		}
+		nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
+<nav>
+   
+    
 
-<div id="b"><b>
-Moja strona <img src="dg.png" class="z">
-</b></div>
-<div id="e"><b>
-Kontakt
-</b></div>
-<a href="o mnie.html"><div id="d"><b>
-O mnie
-</b></div></a>
-<a href="index.html"><div id="c"><b>
-Home
-</b></div></a>
-<div id ="a">
-<h1><br><br><br><br><center>
-Jak chcesz to dzwoń: 246164512</center></h1>
-</div>
+ 
+<a href="file:///C:/Users/TECE/Desktop/simple.html">Strona Główna</a>
+    
+   
+<a href="file:///C:/Users/TECE/Desktop/o%20mnie.html">O Mnie</a>
+    
+    
+<a>Kontakt</a>
 
+<a href="file:///C:/Users/TECE/Desktop/kalkulator.html">Kalkulator</a>
+
+
+</nav>
+    <div class="container">
+        <h1>Kontakt - Simple Cars</h1>
+		
+        
+        <h2>Kontakt:</h2>
+        <p>Telefon: 421471821</p>
+        <p>E-mail: <a href="mailto:adres@simplecars.com">adres@simplecars.com</a></p>
+        
+        <h2>Godziny otwarcia:</h2>
+        <p>Poniedziałek - Piątek: 8:00 - 18:00</p>
+        <p>Sobota: 8:00 - 15:00</p>
+        <p>Niedziela: Nieczynne</p>
+        
+ 
+        
+        <h2>Napisz do nas:</h2>
+        <form action="mailto:adres@simplecars.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Imię i nazwisko" required><br>
+            <input type="email" name="email" placeholder="Adres e-mail" required><br>
+            <input type="text" name="subject" placeholder="Temat wiadomości" required><br>
+            <textarea name="message" placeholder="Treść wiadomości" rows="4" required></textarea><br>
+            <input type="submit" value="Wyślij">
+        </form>
+        
+
+    </div>
 </body>
 </html>
